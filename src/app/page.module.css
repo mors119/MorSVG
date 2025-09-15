@@ -1,0 +1,139 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  max-width: 1400px;
+  height: 85vh;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* 자식 요소가 부모를 넘지 않도록 */
+}
+
+.panel h2 {
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.editorPanel {
+  /* 어두운 테마에 맞춰 배경색 변경 */
+  background-color: #2d2d2d;
+}
+
+.editorPanel h2 {
+  background-color: #393939;
+  color: #ccc;
+  border-bottom: 1px solid #444;
+}
+
+.editorContainer {
+  flex-grow: 1;
+  overflow: auto; /* 스크롤바가 필요할 때 생기도록 */
+  border: 2px solid transparent; /* 평소엔 테두리 없앰 */
+}
+
+.editor,
+.editor > textarea {
+  font-family: 'Fira Code', 'D2Coding', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  outline: none;
+}
+
+.errorBorder {
+  border: 2px solid #e53e3e !important;
+}
+
+.errorMessage {
+  padding: 10px 20px;
+  background-color: #fed7d7;
+  color: #c53030;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.previewArea {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.editor:focus {
+  outline: 2px solid deepskyblue;
+  outline-offset: -2px;
+}
+
+.previewArea {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.errorBorder {
+  border: 2px solid #e53e3e !important; /* 오류 시 빨간색 테두리 */
+}
+
+.errorMessage {
+  padding: 10px 20px;
+  background-color: #fed7d7;
+  color: #c53030;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fafafa;
+}
+
+.panelHeader h2 {
+  padding: 15px 0;
+  border-bottom: none;
+}
+
+.downloadButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.downloadButton:hover {
+  background-color: #0056b3;
+}
+
+.downloadButton:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
